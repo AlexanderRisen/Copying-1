@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>FIGMA 2</title>
+</head>
+<body>
+    
+    <header>
+        <nav class="header-holder">
+            <a href="#homeid" class="header-navs" id="home">Home</a>
+            <a href="#aboutid" class="header-navs" id="aboutme">About me</a>
+            <a href="#skillsid" class="header-navs" id="skills">Skills</a>
+            <a href="#portfolioid" class="header-navs" id="portfolio">Portfolio</a>
+            <a href="#contactsid" class="header-navs" id="contacts">Contacts</a>
+        </nav>
+    </header>
+
+    <nav class="adapt">
+        <div class="home-holder">
+            <a href="#homeid" class="adapt-nav-btn">Home</a>
+            <img src="imgs/closeimg.png" alt="" class="closeimg">
+        </div>
+        <a href="#aboutid" class="adapt-nav-btn">About me</a>
+        <a href="#skillsid" class="adapt-nav-btn">Skills</a>
+        <a href="#portfolioid" class="adapt-nav-btn">Portfolio</a>
+        <a href="#contactsid" class="adapt-nav-btn">Contacts</a>
+        <div class="first-language-adapt">
+            <h4 class="first-ru-adapt">RU </h4><h4>|</h4><h4 class="first-eng-adapt"> ENG</h4>
+        </div>
+    </nav>
+
+    <div class="main">
+        <div class="first-page" id="homeid">
+            
+            <div class="container">
+
+                <img src="imgs/equalimg.png" alt="" class="header-adapt-btn">
+
+                <div class="first-text">
+                
+                    <h1 class="first-name">Denis<br>Novik</h1>
+                    <span class="first-design">UX | UI designer<br>
+                        24 years old, Minsk</span>
+                    <div class="first-language">
+                        <h4 class="first-ru">RU </h4><h4>|</h4><h4 class="first-eng"> ENG</h4>
+                    </div>
+    
+                </div>
+                <img src="imgs/personimg.png" class="first-img">
+                <img src="imgs/personAdapt.png" alt="" class="first-img-adapt">
+
+            </div>
+
+        </div>
+
+
+        <div class="aboutme-block" id="aboutid">
+            <div class="container">
+                <h1 class="about-title">About me</h1>
+                <br>
+                <p class="about-text">Hi, I'm Denis – UX/UI designer from Minsk.<br> 
+                    I'm interested in design and everything connected with it.</p>
+                <br><br>
+                <p class="about-text">I'm studying at courses "Web and mobile design<br>
+                    interfaces" in IT-Academy.</p>
+                <br><br>
+                <p class="about-text">Ready to implement excellent projects<br>
+                     with wonderful people.</p>
+            </div>
+        </div>
+
+
+        <div class="skills-block" id="skillsid">
+            <div class="container">
+                <h1 class="skills-title">Skills</h1>
+                <span class="skills-subtitle">I work in such programs as</span>
+                <div class="skills-logos">
+                    <img src="imgs/PSimg.png" alt="" class="skills-logo">
+                    <img src="imgs/Illustratorimg.png" alt="" class="skills-logo">
+                    <img src="imgs/AEimg.png" alt="" class="skills-logo">
+                    <img src="imgs/Figmaimg.png" alt="" class="skills-logo">
+                </div>
+            </div>
+        </div>
+
+
+        <div class="portfolio-block" id="portfolioid">
+            <div class="container">
+                <h1 class="portfolio-title">Portfolio</h1>
+                <img src="imgs/portfolio1.png" alt="" class="portfolio-img">
+                <a href="#" class="portfolio-subtitle">Online fashion store - Homepage</a>
+                <img src="imgs/portfolio2.png" alt="" class="portfolio-img">
+                <a href="#" class="portfolio-subtitle">Reebok Store - Concept</a>
+                <img src="imgs/portfolio3.png" alt="" class="portfolio-img">
+                <a href="#" class="portfolio-subtitle">Braun Landing Page - Concept</a>
+            </div>
+        </div>
+
+
+        <div class="contacts-block" id="contactsid">
+            <div class="container">
+                <h1 class="contacts-title">Contacts</h1>
+                <span class="contacts-subtitle">Want to know more or just chat?<br> 
+                    You are welcome!</span><br>
+                <button class="contacts-btn">Send message</button>
+                <div class="contacts-imgs">
+                    <img src="imgs/contacts1.png" alt="" class="contacts-img">
+                    <img src="imgs/contacts2.png" alt="" class="contacts-img">
+                    <img src="imgs/contacts3.png" alt="" class="contacts-img">
+                    <img src="imgs/contacts4.png" alt="" class="contacts-img">
+                </div>
+                <span class="contacts-lowerText">
+                    Like me on<br>
+                    LinkedIn, Instagram, Behance, Dribble
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+        // Scroll
+
+        $(function() {
+            $('a[href^="#"').click(function() {
+                let href = $(this).attr('href');
+
+                $('html, body').animate({
+                    scrollTop: $(href).offset().top
+                }, 1000);
+                return false;
+            });
+        });
+
+        // Adapt menu button
+
+            $('.header-adapt-btn').click(function() {
+                $('.adapt').css('display', 'flex');
+                $('.main').css('display', 'none');
+            });
+            
+            $('.closeimg').click(function() {
+                $('.adapt').css('display', 'none');
+                $('.main').css('display', 'flex');
+            });
+
+            $('.adapt-nav-btn').click(function() {
+                $('.main').css('display', 'flex');
+                $('.adapt').css('display', 'none');
+            });
+    </script>
+</body>
+</html>
